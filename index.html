@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Character Counter</title>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-950 via-cyan-900 to-emerald-800">
+
+    <!-- Card -->
+    <div class="w-[460px] rounded-[30px] bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl p-8 text-center">
+
+        <!-- Icon -->
+        <div class="w-[90px] h-[90px] mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 flex items-center justify-center text-[45px] shadow-xl">
+            ✍️
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-white text-[32px] font-bold">
+            Character Counter
+        </h1>
+
+        <p class="text-gray-200 mt-2 mb-6">
+            Type your text below and watch the character count update instantly.
+        </p>
+
+        <!-- Input -->
+        <input
+            id="text-9"
+            type="text"
+            placeholder="Type something..."
+            class="w-full bg-white/15 border border-white/30 rounded-[18px] px-5 py-4 text-white placeholder:text-gray-300 text-[18px] outline-none focus:ring-2 focus:ring-cyan-400 duration-300 mb-7">
+
+        <!-- Counter Box -->
+        <div class="bg-black/30 border border-white/20 rounded-[20px] py-5 shadow-inner">
+
+            <p class="text-gray-300 text-[18px]">
+                Total Characters
+            </p>
+
+            <h2 id="counter-9"
+                class="text-[60px] font-extrabold text-cyan-300 tracking-[4px] font-mono">
+                0
+            </h2>
+
+        </div>
+
+    </div>
+
+    <script>
+        let input = document.getElementById("text-9");
+        let counter = document.getElementById("counter-9");
+
+        input.addEventListener("input", () => {
+            counter.textContent = input.value.length;
+        });
+    </script>
+
+</body>
+</html>
